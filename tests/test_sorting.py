@@ -1,6 +1,7 @@
 import numpy as np
 
 from sorting.bubble_sort import bubble_sort, optimized_bubble_sort
+from sorting.exchange_sort import exchange_sort, optimized_exchange_sort
 
 def test_already_sorted_arrays():
     for _ in range(25):
@@ -8,6 +9,8 @@ def test_already_sorted_arrays():
 
         assert bubble_sort(sorted_array) == sorted_array
         assert optimized_bubble_sort(sorted_array) == sorted_array
+        assert exchange_sort(sorted_array) == sorted_array
+        assert optimized_exchange_sort(sorted_array) == sorted_array
 
 def test_already_reverse_sorted_arrays():
     for _ in range(25):
@@ -15,6 +18,8 @@ def test_already_reverse_sorted_arrays():
 
         assert bubble_sort(reverse_sorted_array) == list(reversed(reverse_sorted_array))
         assert optimized_bubble_sort(reverse_sorted_array) == list(reversed(reverse_sorted_array))
+        assert exchange_sort(reverse_sorted_array) == list(reversed(reverse_sorted_array))
+        assert optimized_exchange_sort(reverse_sorted_array) == list(reversed(reverse_sorted_array))
 
 def test_random_arrays():
     for _ in range(25):
@@ -22,3 +27,5 @@ def test_random_arrays():
 
         assert bubble_sort(unsorted_array) == sorted(unsorted_array)
         assert optimized_bubble_sort(unsorted_array) == sorted(unsorted_array)
+        assert exchange_sort(unsorted_array) == sorted(unsorted_array)
+        assert optimized_exchange_sort(unsorted_array) == sorted(unsorted_array)
