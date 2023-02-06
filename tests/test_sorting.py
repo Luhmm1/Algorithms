@@ -3,6 +3,7 @@ import numpy as np
 from sorting.bubble_sort import bubble_sort, optimized_bubble_sort
 from sorting.exchange_sort import exchange_sort
 from sorting.insertion_sort import insertion_sort
+from sorting.quick_sort import quick_sort
 from sorting.selection_sort import selection_sort
 
 def test_already_sorted_arrays():
@@ -13,6 +14,7 @@ def test_already_sorted_arrays():
         assert optimized_bubble_sort(sorted_array) == sorted_array
         assert exchange_sort(sorted_array) == sorted_array
         assert insertion_sort(sorted_array) == sorted_array
+        assert quick_sort(sorted_array) == sorted_array
         assert selection_sort(sorted_array) == sorted_array
 
 def test_already_reverse_sorted_arrays():
@@ -24,6 +26,7 @@ def test_already_reverse_sorted_arrays():
         assert optimized_bubble_sort(reverse_sorted_array) == expected_array
         assert exchange_sort(reverse_sorted_array) == expected_array
         assert insertion_sort(reverse_sorted_array) == expected_array
+        assert quick_sort(reverse_sorted_array) == expected_array
         assert selection_sort(reverse_sorted_array) == expected_array
 
 def test_random_arrays():
@@ -35,4 +38,5 @@ def test_random_arrays():
         assert optimized_bubble_sort(unsorted_array) == expected_array
         assert exchange_sort(unsorted_array) == expected_array
         assert insertion_sort(unsorted_array) == expected_array
+        assert quick_sort(unsorted_array) == expected_array
         assert selection_sort(unsorted_array) == expected_array
